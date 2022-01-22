@@ -4,8 +4,8 @@ class CheckaliveLogic(object):
     """
     CheckaliveLogic
     """
-    def __init__(self, logger = None) -> None:
-        super().__init__()
+    def __init__(self, logger = None):
+        self.logger = logger
     
-    def checkalive():
+    def checkalive(self):
         return "it's ok!", None

@@ -32,7 +32,7 @@ def create_app():
     register_api(apis)
     
     @app.before_request
-    def record():
+    def setup():
         """
         flask前置操作
         """

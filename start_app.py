@@ -14,7 +14,7 @@ path_of_current_dir = os.path.split(path_of_current_file)[0]
 _file_name = os.path.basename(__file__)
 
 # gevent 在有些Linux环境执行报错
-gevent.monkey.patch_all()
+#gevent.monkey.patch_all()
 debug = False
 loglevel = 'info'
 bind = '{}:{}'.format(ServerConfig.Host, ServerConfig.Port)
@@ -25,5 +25,5 @@ accesslog = '%s/logs/access.logs' % (path_of_current_dir,)
 workers = multiprocessing.cpu_count()*2 + 1
 timeout = 36000
 preload_app = False
-deamon = True
+daemon = True
 x_forwarded_for_head = 'X-FORWARDED_FOR'
